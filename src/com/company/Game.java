@@ -22,9 +22,9 @@ public class Game {
 
         System.out.println("---WELCOME---");
         System.out.println("---Please Enter Your Name---");
-        //String playerName = scan.nextLine();                    // burayi degitir
-        Player player = new Player("Hasan");                //Burayi degistir
-        System.out.println("---PLACEHOLDER---");
+        String playerName = scan.nextLine();
+        Player player = new Player(playerName);
+        System.out.println("--- Welcome " + player.getName() + " ---");
         player.selectChar();
 
         SafeHouse safeHouse = new SafeHouse(player);
@@ -33,8 +33,6 @@ public class Game {
         River river = new River(player);
         Forest forest = new Forest(player);
         Mine mine = new Mine(player);
-
-
 
 
         boolean gameOver = false;
@@ -87,6 +85,10 @@ public class Game {
             else if (selLocNum == 0) {
                 gameOver = true;
                 System.out.println("!!! Coward Alert !!!");
+            }
+
+            else {
+                System.out.println("--- Please Make Sure You Enter Destination Correctly ---");
             }
 
             System.out.println();

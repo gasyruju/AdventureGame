@@ -63,7 +63,8 @@ public class Player {
             initPlayer(new Knight());
         }
         else{
-            initPlayer(new Samurai());
+            System.out.println("--- Please Make Sure You Enter Character ID Correctly ---");
+            this.selectChar();
         }
 
         System.out.println("Characters: " + getCharName() +
